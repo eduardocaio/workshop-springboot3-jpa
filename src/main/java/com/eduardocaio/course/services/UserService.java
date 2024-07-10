@@ -34,15 +34,15 @@ public class UserService {
 	}
 	
 	public void delete(Long id) {
-		if (!repository.existsById(id)) {
+		/*if (!repository.existsById(id)) {
 	        throw new ResourceNotFoundException(id);
 	    }
-		try {
+		try {*/
 	    repository.deleteById(id);
-		} catch(DataIntegrityViolationException e) {
+		/*} catch(DataIntegrityViolationException e) {
 			throw new DatabaseException(e.getMessage());
 		}
-		
+		*/
 		}
 	
 	public User update(Long id, User obj) {
